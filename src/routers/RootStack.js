@@ -10,7 +10,7 @@ const RootStack = () => {
     return (
         <Stack.Navigator
             initialRouteName="AnimatedSplash"
-            screenOptions={{ gestureEnabled: false, headerShown: false }}
+            screenOptions={{ gestureEnabled: false, headerShown: true }}
         >
             <Stack.Screen
                 name="Home"
