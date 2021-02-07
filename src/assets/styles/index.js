@@ -8,7 +8,7 @@ const STYLES = (customStyles = {}) => StyleSheet.create({
         ...customStyles
     },
     categoryText: {
-        textAlign: 'center', fontSize: 14,
+        textAlign: 'center', fontSize: 14, color:'black',
         ...customStyles
     }
 })

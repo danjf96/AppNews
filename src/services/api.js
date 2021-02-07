@@ -4,7 +4,7 @@ import {
 import axios from 'axios'
 
 //DEV
-const baseURL = ''
+const baseURL = 'https://api.nytimes.com/svc/topstories/v2/'
 
 var api = axios.create({
     baseURL,
@@ -18,6 +18,7 @@ var api = axios.create({
 
 api.interceptors.request.use(function (request) {
     console.log('REQUEST => ',request)
+    request.url += '?api-key=AKGW22SJzix41dVmtNVEoPAEzjO7IcRs'
     return request;
 }, function (error) {
     console.log('ERROR REQUEST', error)
@@ -38,21 +39,23 @@ export default api
 export const URL = baseURL
 
 export const errorTreatment = (err) => {
-    //console.log('error',err.response.data)
+    //console.log('error',err.response)
     let treatedError
-    console.log(err.response)
-    if (err.response && err.response.data && (err.response.data.payload || err.response.data.mensagem || err.response.data.message)) {
-        
-        if(err.response.data.mensagem || err.response.data.message )
-            treatedError = err.response.data.mensagem || err.response.data.message
-        else  
-            treatedError = err.response.data.payload
+    //console.log(err.response)
+    if (err.response && err.response.data) {
+
+        if(err.response.data.fault)
+            treatedError = err.response.data.fault.faultstring
             
-    } else if (err.status == 500) { 
+    } else if (err.response.status == 500) { 
         treatedError = 'Erro interno do servidor.'
-    } else {
+    } 
+    else if (err.response.status == 401) { 
+        treatedError = 'Erro de autorização'
+    }
+    else {
         treatedError = 'Falha na comunicação com o servidor. Verifique sua conexão com a internet.'
     }
-    Alert.alert('Atenção', treatedError)
+    Alert.alert('Atenção - ' + err.response.status, treatedError)
     return treatedError
 }
