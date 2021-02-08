@@ -1,6 +1,6 @@
 import { Dimensions, StyleSheet } from 'react-native'
-import COLORS from './Colors'
 const { width, height } = Dimensions.get('window')
+const LOGO = require('../../assets/imgs/logo.jpg')
 
 const STYLES = (customStyles = {}) => StyleSheet.create({
     categorieButton: {
@@ -18,5 +18,5 @@ const STYLES = (customStyles = {}) => StyleSheet.create({
 
 })
 
-export { width, height }
+export { width, height, LOGO }
 export default STYLES
