@@ -24,7 +24,7 @@ const Home = () => {
             <Text style={STYLES().h1}> News: </Text>
 
             {news.loading
-                ? <ActivityIndicator color={'blue'} size={'large'}/>
+                ? <ActivityIndicator color={'black'} size={'large'}/>
                 : <ListNews />
             }
             

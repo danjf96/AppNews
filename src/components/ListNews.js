@@ -34,7 +34,7 @@ const ListNews = () => {
 
     return (
         <FlatList 
-            style={{ width: '100%'}}
+            style={{ width: '100%', paddingRight:10}}
             data={list}
             renderItem={renderItem}
             keyExtractor={ (item,index) => 'news'+index}

@@ -5,8 +5,8 @@ import { NavigationContainer } from '@react-navigation/native' //
 
 import RootStack from './RootStack'
 
-const rotasParaFechaApp = []
-const rotasRotaDesativaBack = []
+const rotasParaFechaApp = ['AppNews','Init']
+const rotasRotaDesativaBack = ['AppNews']
 const Rotas = () => {
     const nav = useRef(null);
 
@@ -17,7 +17,7 @@ const Rotas = () => {
             if(nav.current) {
                 
                 const rotaAtual = nav.current.getCurrentRoute()
-
+    
                 if (rotasParaFechaApp.includes(rotaAtual.name)) {
                     BackHandler.exitApp()
                     return false
