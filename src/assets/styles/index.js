@@ -10,7 +10,12 @@ const STYLES = (customStyles = {}) => StyleSheet.create({
     categoryText: {
         textAlign: 'center', fontSize: 14, color:'black',
         ...customStyles
-    }
+    },
+
+    h1: { fontSize: 25, fontWeight:'bold',textAlign: 'left', marginVertical: 15, width:'100%', ...customStyles },
+
+    text: { fontSize: 18, textAlign: 'center', marginVertical: 15, width:'100%', ...customStyles },
+
 })
 
 export { width, height }

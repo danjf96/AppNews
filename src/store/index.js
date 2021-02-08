@@ -1,9 +1,11 @@
 
 import { combineReducers } from 'redux'
 import news from './ducks/news'
+import article from './ducks/article'
 
 const reducers = {
-    news
+    news,
+    article
 }
 
 export { reducers }

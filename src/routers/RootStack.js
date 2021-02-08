@@ -13,7 +13,7 @@ const RootStack = () => {
             screenOptions={{ gestureEnabled: false, headerShown: true }}
         >
             <Stack.Screen
-                name="Home"
+                name="AppNews"
                 component={Home}
             />  
         

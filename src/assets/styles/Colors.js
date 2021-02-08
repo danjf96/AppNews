@@ -9,7 +9,9 @@ const COLORS = {
     loading: 'blue',
 
     primaria: '#543482',
-    secundaria: '#00c8c8'
+    secundaria: '#00c8c8',
+
+    lightgray: 'lightgray'
 }
 
 export default COLORS
