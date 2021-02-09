@@ -11,6 +11,7 @@ Rodar o projeto em DEV
 Android ->  react-native run-android
 Ios -> react-native run-ios
 
+APK android -> https://drive.google.com/file/d/17mXD79Y79FxSUwLYMqZO5UbJNFsZ8rLp/view?usp=sharing
 
 Pirâmide de testes (resumo)
 Basicamente é definir niveis dos testes e auxiliar na quantidade que deve ser realizado em cada um deles.
