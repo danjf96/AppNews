@@ -17,4 +17,4 @@ Pirâmide de testes (resumo)
 Basicamente é definir niveis dos testes e auxiliar na quantidade que deve ser realizado em cada um deles.
 São divididos em 3 tipos, no top está o teste de ponta a ponta onde imita o comportamento do usuario, logo depois vem o teste de integração,
 mais simples e rapidos de serem realizados, testando algumas unidades em conjunto e na base temos o teste de unidade em que verifica a menor unidade,
-independente  da interção com as outras unidades.
+independente  da interação com as outras unidades.
