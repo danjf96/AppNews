@@ -1,9 +1,10 @@
 import React from 'react'
 import { View } from 'react-native'
+import STYLES from '../assets/styles'
 
 const Container = (props) => {
     return (
-        <View style={{ flex: 1, width:'100%', padding: 12, alignItems:'center', justifyContent:'flex-start', ...props.style}}>
+        <View style={STYLES(props.style).container}>
             {props.children}
         </View>
     )

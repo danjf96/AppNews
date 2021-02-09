@@ -2,9 +2,8 @@ import moment from 'moment'
 import React from 'react'
 import { FlatList, TouchableOpacity, View, Text, Image } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
-import COLORS from '../assets/styles/Colors'
+import STYLES from '../assets/styles'
 import { setArticle } from '../store/ducks/article'
-import { getNews } from '../store/ducks/news'
 import { getPhotoArticle } from '../utils/functions'
 
 const ListNews = () => {
@@ -17,7 +16,7 @@ const ListNews = () => {
         const { width, height, url } = getPhotoArticle(multimedia, 'Standard Thumbnail')
 
         return (
-            <TouchableOpacity style={{ flex: 1, flexDirection:'row', alignItems: 'center', paddingVertical: 12, borderBottomWidth: 1.2, borderColor: COLORS.lightgray}} onPress={() => select(item)}>
+            <TouchableOpacity style={STYLES().cardNews} onPress={() => select(item)}>
                 
                 <Image source={{ uri: url}} style={{ width, height, marginRight: 10, borderRadius: 8}} />
                 
@@ -34,7 +33,7 @@ const ListNews = () => {
 
     return (
         <FlatList 
-            style={{ width: '100%', paddingRight:10}}
+            style={{ width: '100%', paddingRight:10 }}
             data={list}
             renderItem={renderItem}
             keyExtractor={ (item,index) => 'news'+index}

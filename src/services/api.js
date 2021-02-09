@@ -27,10 +27,10 @@ api.interceptors.request.use(function (request) {
 
 api.interceptors.response.use(function (response) {
     const { status, data } = response
-    console.log('RESPONSE => ',response)
+   // console.log('RESPONSE => ',response)
     return response;
 }, function (error) {
-    console.log('ERROR RESPONSE => ',error)
+    //console.log('ERROR RESPONSE => ',error)
     return Promise.reject(error);
 });
 

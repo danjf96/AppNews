@@ -3,7 +3,6 @@ import {
   LogBox
 } from 'react-native';
 
-
 import { createDispatchHook, Provider } from 'react-redux';
 import { applyMiddleware, createStore } from 'redux';
 import reducers from './src/store'
